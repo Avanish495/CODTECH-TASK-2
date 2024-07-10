@@ -1,0 +1,68 @@
+/** STUDENT GRADE TRACKER **/
+
+# Function to calculate the average grade
+def calculate_average(grades):
+    if not grades:
+        return 0
+    return sum(grades) / len(grades)
+
+# Function to determine letter grade based on average grade
+def determine_letter_grade(average_grade):
+    if average_grade >= 90:
+        return 'A'
+    elif average_grade >= 80:
+        return 'B'
+    elif average_grade >= 70:
+        return 'C'
+    elif average_grade >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+# Main program
+def main():
+    print("Welcome to the Student Grade Management System!")
+
+    # Initialize an empty list to store grades
+    grades = []
+
+    while True:
+        print("\nOptions:")
+        print("1. Add a grade")
+        print("2. Calculate average grade")
+        print("3. Display overall grade")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1/2/3/4): ")
+
+        if choice == '1':
+            grade = float(input("Enter the grade: "))
+            grades.append(grade)
+            print(f"Grade {grade} added successfully.")
+        elif choice == '2':
+            if not grades:
+                print("No grades entered yet.")
+            else:
+                average_grade = calculate_average(grades)
+                print(f"Average grade: {average_grade:.2f}")
+        elif choice == '3':
+            if not grades:
+                print("No grades entered yet.")
+            else:
+                average_grade = calculate_average(grades)
+                letter_grade = determine_letter_grade(average_grade)
+                print(f"Average grade: {average_grade:.2f}")
+                print(f"Letter grade: {letter_grade}")
+                if letter_grade in {'D', 'F'}:
+                    print("Status: Fail")
+                else:
+                    print("Status: Pass")
+        elif choice == '4':
+            print("Exiting the program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option (1/2/3/4).")
+
+# Run the main program
+if __name__ == "__main__":
+    main()
