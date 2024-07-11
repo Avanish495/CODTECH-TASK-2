@@ -5,4 +5,5 @@ DOMAIN - PYTHON PROGRAMMING
 DURATION - 10 June 2024 - 22 July 2024 
 MENTOR - SRAVANI GOUNI
 
-![Screenshot (37)](https://github.com/Avanish495/CODTECH-TASK-2/assets/175234406/2340e430-2fad-4e1f-9e7e-9e2c32e6ef11)
+![Screenshot (39)](https://github.com/Avanish495/CODTECH-TASK-2/assets/175234406/896903aa-1887-4294-ae31-22acc0c95c00)
+
